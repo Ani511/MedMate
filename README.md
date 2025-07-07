@@ -11,7 +11,9 @@ MedMate is a full-stack medicine management and reminder app that helps users:
 
 ## 🖼️ Live Preview
 
-![Webapp Preview](./medmate-frontend/public/preview.png) 
+![Webapp Preview Search Medicine](SearchMeds.png) 
+![Webapp Preview Search Medicine](SetReminder.png) 
+![Webapp Preview Search Medicine](ReminderHistory.png) 
 
 ---
 
