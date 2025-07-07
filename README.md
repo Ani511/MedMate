@@ -40,16 +40,33 @@ MedMate is a full-stack medicine management and reminder app that helps users:
 MedMate/
 │
 ├── Backend/ # FastAPI backend
-│ ├── main.py # Entry point
-│ ├── scheduler.py # Background jobs (ping/email)
-│ ├── routers/ # API routes (meds, reminders)
-│ ├── models.py, crud.py # DB logic
-│ └── ... # Other configs
+│ ├── main.py # Main entry point
+│ ├── scheduler.py # Background job runner (ping/email)
+│ ├── config.py # Future config values (SMTP, env)
+│ ├── crud.py # DB utility functions (CRUD ops)
+│ ├── database.py # DB connection setup (SQLAlchemy)
+│ ├── email_utils.py # Email sending functions (planned for future)
+│ ├── models.py # SQLAlchemy models (Medicine, Reminder)
+│ ├── schemas.py # Pydantic schemas for validation
+│ └── routers/
+│ ├── meds.py # /medicines/ API route
+│ └── reminders.py # /reminders/ API route
 │
-└── medmate-frontend/ # React frontend
-├── src/components/ # ReminderForm, MedicineSearch, etc.
-├── public/ # Logos, manifest
-└── ... # Tailwind & App setup
+├── medmate-frontend/ # React frontend
+│ ├── public/ # Static files
+│ ├── src/
+│ │ ├── App.js # Main app component
+│ │ ├── App.css # Styling overrides
+│ │ ├── index.js # React entry point
+│ │ ├── index.css # Global Tailwind + custom styles
+│ │ ├── components/
+│ │ │ ├── MedicineSearch.jsx # Medicine search component
+│ │ │ ├── ReminderForm.jsx # Reminder input component
+│ │ │ └── ReminderList.jsx # Reminder history + toast notifications
+│ ├── tailwind.config.js # Tailwind CSS config
+│ ├── postcss.config.js # PostCSS processor
+│ ├── package.json # Frontend dependencies
+├── Readme.md
 ```
 ---
 
