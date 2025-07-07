@@ -92,6 +92,42 @@ npm install
 npm start
 App will run on http://localhost:3000 by default.
 ```
+### 🧪 3. Sample API Requests
+Add sample requests for testing your backend manually via Postman or Swagger UI.
+#### 🔌 Sample API Endpoints
+
+##### ➕ Add Reminder
+
+```http
+POST /reminders/
+Content-Type: application/json
+
+{
+  "user_id": "john123",
+  "medicine_name": "Paracetamol",
+  "time": "08:30"
+}
+```
+#### 📋 Get Reminders
+```http
+GET /reminders/?user_id=john123
+```
+🔍 Search for Medicines
+```http
+GET /medicines/?name=paracetamol
+```
+---
+
+### 🔒 4. **Planned Auth + Deployment Ideas**
+
+```markdown
+- 👤 User Authentication (JWT / Google OAuth)
+- 📱 Mobile-first UI support
+- 🚀 Deployment on:
+  - Frontend: Vercel
+  - Backend: Render
+  - Database: Supabase or Railway PostgreSQL
+```
 ---
 ### 📌 Upcoming Features
 - 📧 Email reminders via SMTP integration
